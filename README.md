@@ -9,3 +9,12 @@ This is my journey as 42 cadet - build my own C library from scratch and learnin
 -ft_isprint
 -ft_toupper
 -ft_tolower
+
+"Memory f(x)"
+-ft_memset
+-ft_bzero
+-ft_memcpy
+-ft_memmove
+-ft_memchr
+-ft_memcmp
+-ft_calloc
