@@ -6,7 +6,7 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:07:24 by adzmusta          #+#    #+#             */
-/*   Updated: 2025/12/15 12:48:42 by adzmusta         ###   ########.fr       */
+/*   Updated: 2025/12/15 13:36:56 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static char	*build_string(long number, int count, int total_len, int isnegative)
 {
 	char	*str;
 
-	str = (char *)malloc(total_length + 1);
+	str = (char *)malloc(total_len + 1);
 	if (!str)
 		return (NULL);
 	str[total_len] = '\0';
