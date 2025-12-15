@@ -6,7 +6,7 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:07:24 by adzmusta          #+#    #+#             */
-/*   Updated: 2025/12/15 13:36:56 by adzmusta         ###   ########.fr       */
+/*   Updated: 2025/12/15 13:40:10 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ char	*ft_itoa(int n)
 	count = digit_count(temp);
 	length = total_len(count, sign);
 	if (n < 0)
-		temp = (long)n * 1;
+		temp = (long)n * -1;
 	else
 		temp = n;
 	return (build_string(temp, count, length, sign));
