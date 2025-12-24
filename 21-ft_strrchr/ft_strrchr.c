@@ -6,7 +6,7 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 23:55:32 by adzmusta          #+#    #+#             */
-/*   Updated: 2025/12/24 23:56:33 by adzmusta         ###   ########.fr       */
+/*   Updated: 2025/12/24 23:57:48 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,11 @@ char	&ft_strrchr(const char *str, int ch)
 	i = 0;
 	while (str[i])
 	{
-		if (
+		if (str[i] == (char)ch)
+			last = (char *)&str[i];
+		i++;
+	}
+	if ((char)ch == '\0')
+		return ((char *)&str[i]);
+	return (last);
+}
