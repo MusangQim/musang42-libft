@@ -6,7 +6,7 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 23:50:47 by adzmusta          #+#    #+#             */
-/*   Updated: 2025/12/24 23:52:37 by adzmusta         ###   ########.fr       */
+/*   Updated: 2025/12/24 23:54:09 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,7 @@ char	*ft_strchr(const char *str, int ch)
 			return ((char *)&str[i]);
 		i++;
 	}
-	if (str[i] == 
+	if (str[i] == (char)ch)
+		return ((char *)&str[i]);
+	return (NULL);
+}
