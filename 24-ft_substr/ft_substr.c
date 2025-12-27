@@ -6,7 +6,7 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/26 22:31:09 by adzmusta          #+#    #+#             */
-/*   Updated: 2025/12/27 22:04:03 by adzmusta         ###   ########.fr       */
+/*   Updated: 2025/12/27 22:19:18 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,16 @@ static char	*str_empty(void)
 	return (string);
 }
 
+static char	*str_new(char const *s, size_t start, size_t len)
+{
+	char		*string;
+	size_t		i;
+	
+	string = malloc(len + 1);
+	
+
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t		substr_len;
@@ -34,6 +44,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start >= ft_strlen(s))
 		return (str_empty());
 	substr_len = ft_strlen(s) - start;
-
+	if (substr_len > len)
+		substr_len = len;
 }
 
