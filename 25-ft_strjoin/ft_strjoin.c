@@ -6,11 +6,32 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 23:37:53 by adzmusta          #+#    #+#             */
-/*   Updated: 2025/12/28 23:52:50 by adzmusta         ###   ########.fr       */
+/*   Updated: 2025/12/28 23:57:38 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	str_copy(char *dest, const char *s1, const char *s2)
+{
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	while (s1[i])
+	{
+		dest[i] = s1[i];
+		i++;
+	}
+	j = 0;
+	while (s2[i])
+	{
+		dest[i] = s2[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
+}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
