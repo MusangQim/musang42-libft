@@ -6,7 +6,7 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 21:51:14 by adzmusta          #+#    #+#             */
-/*   Updated: 2025/12/29 22:29:54 by adzmusta         ###   ########.fr       */
+/*   Updated: 2025/12/29 22:37:41 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,24 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
-
 	start = 0;
-
+	while (s1[start] && check_set(s1[start], set))
+		start++;
+	end = 0;
+	while (s1[end])
+		end++;
+	if (end > 0)
+		end--;
+	while ((end >= start) && check_set(s1[end], set))
+		end--;
+	if (start > end)
+		return (str_empty);
+	result = str_new(end - start + 1);
+	if (!result)
+		return (NULL);
+	i = 0;
+	while (start <= end)
+		result[i++] = s1[start++];
+	result[i] = '\0';
+	return (result);
+}
