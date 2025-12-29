@@ -6,7 +6,7 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 21:51:14 by adzmusta          #+#    #+#             */
-/*   Updated: 2025/12/29 23:19:38 by adzmusta         ###   ########.fr       */
+/*   Updated: 2025/12/29 23:22:46 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,22 +45,22 @@ static char	*str_empty(void)
 	return (str);
 }
 
-static void	*start_end(char const *s1, char const *set, size_t *s, size_t *e)
+static void	start_end(char const *s1, char const *set, size_t *s, size_t *e)
 {
-	size_t	s;
-	size_t	e;
+	size_t	start;
+	size_t	end;
 
-	s = 0;
-	e = 0;
-	while (s1[s] && check_set(s1[s], set))
-		s++;
-	e = ft_strlen(s1);
-	if (e > 0)
-		e--;
-	while ((e >= start) && check_set(s1[e], set))
-		e--;
-	*starty = s;
-	*end = e;
+	start = 0;
+	end = 0;
+	while (s1[start] && check_set(s1[start], set))
+		start++;
+	end = ft_strlen(s1);
+	if (end > 0)
+		end--;
+	while ((end >= start) && check_set(s1[end], set))
+		end--;
+	*s = start;
+	*e = end;
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
