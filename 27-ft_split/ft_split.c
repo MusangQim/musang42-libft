@@ -6,10 +6,12 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/30 23:42:52 by adzmusta          #+#    #+#             */
-/*   Updated: 2025/12/30 23:43:06 by adzmusta         ###   ########.fr       */
+/*   Updated: 2025/12/30 23:43:54 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
+char	**ft_split(char const *s, char c)
+{
+}
