@@ -6,7 +6,7 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/30 23:42:52 by adzmusta          #+#    #+#             */
-/*   Updated: 2025/12/30 23:49:11 by adzmusta         ###   ########.fr       */
+/*   Updated: 2025/12/31 12:10:22 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,7 @@ static void	free_word
 
 char	**ft_split(char const *s, char c)
 {
+	int	i;
+	int	len;
+	char		**result;
 }
