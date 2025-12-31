@@ -6,7 +6,7 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/30 23:42:52 by adzmusta          #+#    #+#             */
-/*   Updated: 2025/12/31 12:10:22 by adzmusta         ###   ########.fr       */
+/*   Updated: 2025/12/31 12:16:59 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,8 @@ char	**ft_split(char const *s, char c)
 	int	i;
 	int	len;
 	char		**result;
+
+	if (!s)
+		return (NULL);
+	result = 
 }
