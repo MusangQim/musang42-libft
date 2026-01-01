@@ -6,7 +6,7 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/30 23:42:52 by adzmusta          #+#    #+#             */
-/*   Updated: 2026/01/01 22:19:58 by adzmusta         ###   ########.fr       */
+/*   Updated: 2026/01/01 22:32:45 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ static size_t	count_word(char const *s, char c)
 
 static size_t	len_word(const char *s, char c)
 {
-	int	i;
+	size_t	i;
 
+	while (!s)
+		return (0);
 	i = 0;
-	while (s[i] = '\0')
-		return (NULL);
-	while (s[i] == c || s[i] == '\0')
+	while (s[i] != c && s[i] != '\0')
 		i++;
 	return (i);
 }
