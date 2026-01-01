@@ -6,22 +6,26 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/30 23:42:52 by adzmusta          #+#    #+#             */
-/*   Updated: 2026/01/01 21:58:44 by adzmusta         ###   ########.fr       */
+/*   Updated: 2026/01/01 22:19:58 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 static size_t	count_word(char const *s, char c)
 {
-	int	i;
-	int	count;
+	size_t	count;
+	size_t	i;
 
-	count = 0;
-	i = 0;
-	while (s[i] == 0)
+	while (!s)
 		return (0);
-	while (s[i] != c && (i == 0 || s[i - 1] == c))
-		count++;
+	i = 0;
+	count = 0;
+	while (s[i])
+	{
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
+			count++;
+		i++;
+	}
 	return (count);
 }
 
