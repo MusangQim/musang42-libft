@@ -6,7 +6,7 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 22:22:17 by adzmusta          #+#    #+#             */
-/*   Updated: 2026/01/01 22:27:41 by adzmusta         ###   ########.fr       */
+/*   Updated: 2026/01/01 22:28:53 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ int	main(void)
 	str = "   hello    world   42   ";
 	delimiter = ' ';
 	total = count_word(str, delimiter);
-	printf ("Total word: &zu\n", total);
+	printf ("Total word: %zu\n", total);
 	return (0);
 }
