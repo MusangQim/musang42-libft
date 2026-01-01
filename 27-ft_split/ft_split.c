@@ -6,7 +6,7 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/30 23:42:52 by adzmusta          #+#    #+#             */
-/*   Updated: 2026/01/01 23:13:51 by adzmusta         ###   ########.fr       */
+/*   Updated: 2026/01/01 23:22:46 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,30 @@ static char	free_word(char **arr, size_t used)
 
 char	**ft_split(char const *s, char c)
 {
+	size_t			total_word;
+	size_t			i;
+	size_t			w;
+	char			**arr;
+
+	if (!s)
+		return (NULL);
+	total_word = count_word(s, c);
+	arr = malloc(sizeof(char *) * (total_word + 1));
+	if (!arr)
+		return (NULL);
+	while (s[i] && w < total_word)
+	{
+		if (s[i] == c)
+		{
+			i++;
+			continue ;
+		}
+		arr[w] = copy_word(&s[i], len_word(&s[i], c));
+		if (!arr[w])
+			return (free_word(arr, w));
+		i += len_word(&s[i], c);
+		w++;
+	}
+	arr[w] = NULL;
+	return (arr);
 }
