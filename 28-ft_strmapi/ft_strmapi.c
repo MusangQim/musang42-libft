@@ -6,7 +6,7 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 23:16:49 by adzmusta          #+#    #+#             */
-/*   Updated: 2026/01/02 23:19:55 by adzmusta         ###   ########.fr       */
+/*   Updated: 2026/01/02 23:21:29 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char		*new_str;
 	unsigned int	i;
 
-	if (!s || !f)
-		return (NULL);
 	new_str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-
+	if (!s || !f || !new_str)
+		return (NULL);
+	i = 0;
+	while (s[i])
