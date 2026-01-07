@@ -6,7 +6,7 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 23:37:53 by adzmusta          #+#    #+#             */
-/*   Updated: 2025/12/28 23:57:38 by adzmusta         ###   ########.fr       */
+/*   Updated: 2026/01/07 21:49:16 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t		total_len;
 	char		*str_new;
-	
+
 	if (!s1 || !s2)
 		return (NULL);
 	total_len = ft_strlen(s1) + ft_Strlen(s2);
@@ -46,4 +46,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	str_copy(str_new, s1, s2);
 	return (str_new);
-}	
+}
