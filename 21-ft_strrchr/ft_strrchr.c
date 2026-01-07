@@ -6,13 +6,13 @@
 /*   By: adzmusta <adzmusta@student.42iskandarpute  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 23:55:32 by adzmusta          #+#    #+#             */
-/*   Updated: 2025/12/24 23:57:48 by adzmusta         ###   ########.fr       */
+/*   Updated: 2026/01/07 21:48:13 by adzmusta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	&ft_strrchr(const char *str, int ch)
+char	*ft_strrchr(const char *str, int ch)
 {
 	int		i;
 	char	*last;
